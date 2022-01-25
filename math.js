@@ -243,3 +243,5 @@ ops[1].addEventListener('click',op1);
 ops[2].addEventListener('click',op2);
 ops[3].addEventListener('click',op3);
 ops[4].addEventListener('click',op4);
+
+//document.querySelector("#subm").addEventListener('click',function(){sendvalues(parametro)});
