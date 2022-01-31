@@ -1,8 +1,3 @@
-//variaveis globais
-//let memorys = [0,1,2,3,4,5,6,7,8];
-//let valueA = 0;
-//let valueB = 0;
-//let result = 0;
 let memolabel = document.querySelectorAll(".memory>label");
 let inpA = document.getElementById("numberA");
 let menA = document.querySelectorAll(".mA");
