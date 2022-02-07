@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Morador</th>
+        <th>botão</th>
+      </tr>
+    </table>
+    <script>
+const moradores = [{
+	  nome: "João",
+	  torre: 1,
+	  apartamento: 01,
+	  andar: 0
+	},
+	{
+	  nome: "Lucas",
+	  torre: 1,
+	  apartamento: 02,
+	  andar: 0
+	},
+	{
+	  nome: "Victória",
+	  torre: 1,
+	  apartamento: 11,
+	  andar: 1
+	},{
+	  nome: "Miguel",
+	  torre: 1,
+	  apartamento: 12,
+	  andar: 1
+	},{
+	  nome: "Alípio",
+	  torre: 2,
+	  apartamento: 01,
+	  andar: 0
+	},{
+	  nome: "Lorena",
+	  torre: 2,
+	  apartamento: 02,
+	  andar: 0
+	},{
+	  nome: "Jairo",
+	  torre: 2,
+	  apartamento: 11,
+	  andar: 1
+	},{
+	  nome: "Jerusa",
+	  torre: 2,
+	  apartamento: 12,
+	  andar: 1
+	}];
+let table = document.querySelector('table');
+let list = [];
+moradores.forEach((item,index) =>{
+	let line = document.createElement('tr');
+  let td1 = document.createElement('td');
+  let td2 = document.createElement('td');
+  let button1 = document.createElement('button');
+  button1.id = item.nome;
+  button1.innerHTML = "adicionar"
+  td1.innerHTML = item.nome;
+  td2.append(button1);
+  line.append(td1);
+  line.append(td2);
+  table.append(line);
+});
+let buttons = document.querySelectorAll('button');
+for (let i= 0; i < buttons.length; i++){
+	buttons[i].addEventListener('click',function(){
+  	list.push(moradores.filter((item) => item.nome == buttons[i].id));
+    console.log(list);
+  });
+}
+    </script>
+  </body>
+ </html>
